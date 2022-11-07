@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        font-family: "Quicksand, sans-serif";
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: white;
+        background: linear-gradient(to right, lightgreen, yellow, lightblue);
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin-block: 2rem;
+        gap: 2rem;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: clamp(20rem, calc(20rem + 2vw),22rem);
+        overflow: hidden;
+        box-shadow: 0.1rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        background: grey;
+        background: linear-gradient(to right, pink, brown);
+      }
+    </style>
+</head>
+<body>
+ <div class="container">
+ <div class="card">
+    <div class="card_header">
+        <img src="C:\img4.jpg" alt="card_image" class="card_image" width="600">
+
+    </div>
+    <div class="card_body">
+        <span class="tag tag-blue">Technology</span>
+        <h4>what's new in 2022 Tech</h4>
+    </div>
+ </div>
+
+ </div>
+ 
+
+  
+  
+</body>
+</html>
