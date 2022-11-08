@@ -6,61 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>practice</title>
     <style>
-      *{
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-      }
-      body{
-        font-family: "Quicksand, sans-serif";
-        display: grid;
-        place-items: center;
-        height: 100vh;
-        background: white;
-        background: linear-gradient(to right, lightgreen, yellow, lightblue);
-      }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1200px;
-        margin-block: 2rem;
-        gap: 2rem;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-        object-fit: cover;
-      }
-      .card {
-        display: flex;
-        flex-direction: column;
-        width: clamp(20rem, calc(20rem + 2vw),22rem);
-        overflow: hidden;
-        box-shadow: 0.1rem 1rem rgba(0, 0, 0, 0.1);
-        border-radius: 1em;
-        background: grey;
-        background: linear-gradient(to right, pink, brown);
-      }
+      h1{
+            text-align: center;
+            padding: 23px;
+            background-color: skyblue;
+            color: white;
+        }
+        #clear{
+            width: 275px;
+            border: 3px solid grey;
+            border-radius: 3px;
+            padding: 16px;
+            background-color: rgb(121, 121, 210);
+        }
+        .formstyle{
+            width: 300px;
+            height: 530px;
+            margin: auto;
+            border: 3px solid skyblue;
+            border-radius: 5px;
+            padding: 20px;
+
+        }
+        input{
+            width: 20px;
+            background-color: grey;
+            color: white;
+            border: 3px solid grey;
+            border-radius: 5px;
+            padding: 26px;
+            margin: 5px;
+            font-size: 15px;
+
+        }
+        #calc{
+            width: 250px;
+            border: 5px solid gray;
+            border-radius: 3px;
+            padding: 20px;
+            margin: auto;
+        }
+
     </style>
 </head>
 <body>
- <div class="container">
- <div class="card">
-    <div class="card_header">
-        <img src="C:\img4.jpg" alt="card_image" class="card_image" width="600">
+  <h1>Calculator Program in JavaScript</h1>
+   <div class="formstyle">
+    <form name="form1">
 
-    </div>
-    <div class="card_body">
-        <span class="tag tag-blue">Technology</span>
-        <h4>what's new in 2022 Tech</h4>
-    </div>
- </div>
+        <!-- this input box shows the button pressed by the user in calculator -->
+        <input type="text" id="calc" name="answer"><br><br>
 
- </div>
- 
+        <!-- display the calculator button on the screen. -->
+        <!-- onclick() function display the number press by the user. -->
 
-  
-  
+        <input type="button" value="1" onclick="form1.answer.value+='1'" >
+        <input type="button" value="2" onclick="form1.answer.value+='2'">
+        <input type="button" value="3" onclick="form1.answer.value+='3'">
+        <input type="button" value="+" onclick="form1.answer.value+='+'">
+        <br><br>
+        <input type="button" value="4" onclick="form1.answer.value+='4'">
+        <input type="button" value="5" onclick="form1.answer.value+='5'">
+        <input type="button" value="6" onclick="form1.answer.value+='6'">
+        <input type="button" value="-" onclick="form1.answer.value+='-'">
+        <br><br>
+        <input type="button" value="7" onclick="form1.answer.value+='7'">
+        <input type="button" value="8" onclick="form1.answer.value+='8'">
+        <input type="button" value="9" onclick="form1.answer.value+='9'">
+        <input type="button" value="*" onclick="form1.answer.value+='*'">
+        <br><br>
+        <input type="button" value="/" onclick="form1.answer.value+='/'">
+        <input type="button" value="0" onclick="form1.answer.value+='0'">
+        <input type="button" value="." onclick="form1.answer.value+='.'">
+
+        <!-- when we click on the'='button, the onclick() shows the sum result on the calculate  -->
+        <input type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value)">
+        <br>
+
+        <!-- display the cancel button and erase all data antered by the user. -->
+        <input type="button" value="Clear All" onclick="form1.answer.value=''"id="clear">
+        <br>
+        </form>
+        </div>
+      
 </body>
 </html>
